@@ -1,0 +1,596 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat&display=swap");
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  background-color: #060507;
+  color: #fff;
+  position: relative;
+}
+
+a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+}
+
+button {
+  color: #fff;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* ---------------------------------------------------------------------- */
+
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #060507;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.loader img {
+  animation: loader-animation 5s linear infinite;
+}
+
+.remove-loader {
+  display: none;
+}
+
+img {
+  width: 100%;
+}
+
+@keyframes loader-animation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.nav a {
+  font-family: "Archivo Black", sans-serif;
+  text-transform: uppercase;
+}
+
+.nav a:hover,
+.nav a:active {
+  color: rgba(255, 255, 255, 0.353);
+}
+
+.nav ul {
+  display: flex;
+  position: relative;
+}
+
+.image-2-3-4-wrapper {
+  position: relative;
+}
+
+.image-3-wrapper,
+.image-4-wrapper {
+  position: absolute;
+  top: 0;
+}
+
+.image-4-wrapper {
+  top: initial;
+  bottom: 0;
+}
+
+.image-3-wrapper {
+  width: 17%;
+  right: calc(2vw + 1px);
+}
+
+.div-2-1 {
+  display: flex;
+  align-items: center;
+}
+
+.div-2-1-1 {
+  display: flex;
+  background-color: #060507;
+  flex-direction: column;
+}
+
+.div-2-1-1 p {
+  text-transform: uppercase;
+}
+
+.div-2-1-1-1 {
+  display: flex;
+  align-items: center;
+}
+
+.div-2-1-1-1-1 {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+}
+
+.strong-1 {
+  color: #3f3e44;
+}
+
+.div-2-1-1-1-2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.strong-2 {
+  font-family: "Archivo Black", sans-serif;
+}
+
+.btn-left,
+.btn-right {
+  background-color: transparent;
+  border: none;
+  flex: 1;
+  font-family: "Archivo Black", sans-serif;
+}
+
+.btn-left {
+  text-align: left;
+}
+
+.btn-right {
+  text-align: right;
+}
+
+.div-4 div {
+  width: 100%;
+  height: 1.7px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+}
+
+.div-5 {
+  display: flex;
+  align-items: center;
+}
+
+.div-4 {
+  position: relative;
+  height: 1.7px;
+}
+
+.div-4 div:last-child {
+  width: 65%;
+  background-color: #a75b12;
+}
+
+.div-6 {
+  display: flex;
+}
+
+.div-7 p {
+  line-height: 2;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.image-3 {
+  animation: rotation 35s linear infinite;
+}
+
+/* -------------------------------------------------------- */
+
+@media screen and (max-width: 1023px) {
+  .loader img {
+    width: 15%;
+  }
+
+  .body-scrolling {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  header {
+    width: 93%;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+
+  .logo {
+    width: 170px;
+  }
+
+  .menu-btn {
+    position: relative;
+    transition: transform 0.2s;
+    z-index: 1000;
+  }
+
+  .menu-btn div {
+    width: 35px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+  }
+
+  .menu-btn :first-child {
+    transition: transform 0.2s, margin 0.2s 0.2s;
+  }
+
+  .menu-btn :last-child {
+    width: 28px;
+    transition: margin 0.2s 0.2s, width 0.2s 0.2s;
+    float: right;
+  }
+
+  .div-1-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .to-close-btn {
+    transform: rotate(45deg);
+    transition: transform 0.2s 0.2s;
+  }
+
+  .to-close-btn div {
+    margin: 0;
+  }
+
+  .to-close-btn :first-child {
+    margin-top: 3px;
+    transform: rotate(90deg);
+    transition: margin 0.2s, transform 0.2s 0.2s;
+  }
+
+  .to-close-btn :last-child {
+    width: 35px;
+    margin-top: -3px;
+    transition: margin 0.2s, width 0.2s;
+  }
+
+  .nav {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../images/gold.png") no-repeat;
+    background-size: cover;
+    visibility: hidden;
+    z-index: 500;
+  }
+
+  .show-menu {
+    visibility: visible;
+  }
+
+  .nav a {
+    font-size: 22px;
+  }
+
+  .nav li {
+    text-align: right;
+  }
+
+  .nav ul {
+    top: 50%;
+    transform: translate(-70px, -50%);
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .div-1 {
+    overflow: hidden;
+  }
+
+  .image-1-wrapper {
+    display: none;
+  }
+
+  .image-2-3-4-wrapper {
+    overflow: hidden;
+  }
+
+  .image-4-wrapper {
+    width: 160%;
+  }
+
+  .image-3-wrapper {
+    top: calc(5vw + 1px);
+  }
+
+  .image-2-wrapper {
+    width: 110%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .div-2-1 {
+    flex-direction: row-reverse;
+    width: 97%;
+    margin: 0 auto;
+  }
+
+  .div-2-1-1 {
+    flex: 5;
+    gap: calc(9vw + 5px);
+  }
+
+  .div-2-1-1-1 {
+    gap: calc(3vw + 3px);
+  }
+
+  .strong-1 {
+    font-size: calc(3vw + 5px);
+  }
+
+  .div-2-1-1-1-2 {
+    gap: calc(2vw + 5px);
+  }
+
+  .div-2-1-1-1-2 p {
+    font-size: calc(2vw + 3px);
+  }
+
+  .strong-2 {
+    font-size: calc(4vw + 4px);
+  }
+
+  .image-5-wrapper {
+    flex: 4;
+  }
+
+  .btn-left,
+  .btn-right {
+    font-size: calc(3vw + 3px);
+  }
+
+  .div-4 {
+    flex: 4;
+  }
+
+  .div-6 {
+    width: 93%;
+    margin: 0 auto;
+    flex-direction: column-reverse;
+    gap: calc(5vw + 1px);
+  }
+
+  .div-7 p {
+    font-size: calc(3vw + 1px);
+  }
+
+  .image-6 {
+    position: relative;
+    right: calc(3vw + 1px);
+  }
+
+  .image-2-3-4-wrapper {
+    margin-bottom: calc(17vw + 1px);
+  }
+
+  .div-2-1 {
+    margin-bottom: calc(5vw + 1px);
+  }
+
+  .div-3 {
+    padding: 25px 0;
+  }
+
+  .bull {
+    font-size: calc(2vw + 3px);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .loader img {
+    width: 10%;
+  }
+
+  .menu-btn div {
+    width: 45px;
+  }
+
+  .menu-btn :last-child {
+    width: 38px;
+  }
+
+  .to-close-btn :last-child {
+    width: 45px;
+  }
+
+  .logo {
+    width: 250px;
+  }
+
+  header {
+    width: 90%;
+    padding: 30px 0;
+  }
+
+  .div-2-1 {
+    width: 94%;
+  }
+
+  .div-6 {
+    width: 90%;
+  }
+
+  .bull {
+    font-size: calc(2vw + 1px);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .loader img {
+    width: 5%;
+  }
+
+  .logo {
+    width: calc(16vw + 1px);
+  }
+
+  .div-1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    gap: calc(6vw + 1px);
+    flex: 10;
+    padding: calc(3vw + -2px) 0 calc(3vw + 1px) calc(4vw + -2px);
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  .nav a {
+    font-size: calc(1vw + -3px);
+  }
+
+  .nav ul {
+    top: 2px;
+    gap: calc(5vw + 1px);
+  }
+
+  .image-1-wrapper {
+    flex: 5;
+  }
+
+  .image-2-3-4-wrapper {
+    flex: 20;
+  }
+
+  .image-4-wrapper {
+    width: 145%;
+  }
+
+  .image-3-wrapper {
+    top: calc(2vw + 1px);
+  }
+
+  .strong-1 {
+    font-size: calc(1vw + 0px);
+  }
+
+  .strong-2 {
+    font-size: calc(1vw + 12px);
+  }
+
+  .div-2-1-1-1 {
+    gap: calc(2vw + -4px);
+  }
+
+  .div-2-1 {
+    display: flex;
+    align-items: center;
+    flex: 13;
+  }
+
+  .div-2-1-1-1-2 {
+    gap: calc(1vw + -6px);
+  }
+
+  .div-2-1-1-1-2 p {
+    font-size: calc(1vw + -4px);
+  }
+
+  .div-2 {
+    display: flex;
+    align-items: flex-start;
+    gap: calc(2vw + -5px);
+  }
+
+  .image-5-wrapper {
+    flex: 20;
+  }
+
+  .div-2-1-1 {
+    position: relative;
+    top: calc(13vw + 1px);
+    flex: 20;
+    gap: calc(4vw + -5px);
+    padding: 0 calc(1vw + 10px);
+  }
+
+  .div-3 {
+    position: absolute;
+    width: 100%;
+    top: calc(9vw + 9px);
+  }
+
+  .btn-left,
+  .btn-right {
+    font-size: calc(1vw + -1px);
+  }
+
+  .div-4 {
+    flex: 3;
+  }
+
+  .div-5 {
+    justify-content: space-between;
+    flex: 10;
+  }
+
+  .div-7 {
+    flex: 11;
+  }
+
+  .div-6 {
+    width: 79%;
+    align-items: center;
+    padding-left: calc(4vw + -2px);
+    gap: calc(5vw + 1px);
+    margin-top: -26px;
+  }
+
+  .image-6-wrapper {
+    flex: 8;
+  }
+
+  .div-7 p {
+    font-size: calc(1vw + -3px);
+  }
+
+  .div-5,
+  .div-7 {
+    position: relative;
+    top: calc(2vw + 1px);
+  }
+
+  .bull {
+    font-size: calc(1vw + 1px);
+  }
+}
