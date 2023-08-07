@@ -2,7 +2,7 @@
 
 <img src="montblanc-motorcycle.png">
 
-This is a full responsive home page of a _showcase website_ which starred a motorcycle named __Montblanc__.
+This is a full responsive home page of a _showcase website_ for a motorcycle called __Montblanc__.
 
 Built with:
 
